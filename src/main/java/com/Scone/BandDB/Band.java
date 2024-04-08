@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Entity
 public class Band {
     @Id
@@ -13,14 +15,17 @@ public class Band {
     private String bandName;
     private int yearFormed;
 
+    private List<Musician> members;
+
     public Band(){
 
     }
 
-    public Band(Long id, String bandName, int yearFormed){
+    public Band(Long id, String bandName, int yearFormed, List<Musician> members){
         this.id = id;
         this.bandName = bandName;
         this.yearFormed = yearFormed;
+        this.members = members;
     }
 
     public long getId() {
