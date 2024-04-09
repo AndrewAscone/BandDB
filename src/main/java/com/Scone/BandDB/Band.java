@@ -51,4 +51,12 @@ public class Band {
     public void setYearFormed(int yearFormed) {
         this.yearFormed = yearFormed;
     }
+
+    public List<Musician> getMembers(){
+        return members;
+    }
+
+    public void setMembers(List<Musician> members){
+        this.members = members;
+    }
 }
