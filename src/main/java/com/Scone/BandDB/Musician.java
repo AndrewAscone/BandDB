@@ -1,8 +1,7 @@
 package com.Scone.BandDB;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 @Entity
 public class Musician {
@@ -10,7 +9,17 @@ public class Musician {
     @GeneratedValue
     private long id;
 
+    @JsonIgnore
+    @OneToMany
+    private Band band;
+
     private String firstName;
     private String lastName;
     private String instrument;
+
+    public Musician(){
+
+    }
+
+
 }

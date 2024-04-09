@@ -3,6 +3,7 @@ package com.Scone.BandDB;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class Band {
     private String bandName;
     private int yearFormed;
 
+    @OneToMany
     private List<Musician> members;
 
     public Band(){
