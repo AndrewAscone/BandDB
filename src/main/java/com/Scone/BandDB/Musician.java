@@ -10,7 +10,7 @@ public class Musician {
     private long id;
 
     @JsonIgnore
-    @OneToMany
+    @ManyToOne
     private Band band;
 
     private String firstName;
