@@ -13,6 +13,6 @@ public class BandConfig {
 
     @PostConstruct
     public void setup(){
-
+        Musician musician1 = new Musician();
     }
 }

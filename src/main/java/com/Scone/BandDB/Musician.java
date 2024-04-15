@@ -21,6 +21,13 @@ public class Musician {
 
     }
 
+    public Musician(Long id, String firstName, String lastName, String instrument){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.instrument = instrument;
+    }
+
     public long getId() {
         return id;
     }
