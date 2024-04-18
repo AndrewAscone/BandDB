@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Configuration
@@ -36,6 +37,8 @@ public class BandConfig {
         musician4.setLastName("Fishman");
         musician4.setInstrument("Drums");
 
+        musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4));
+
         List<Musician> firstBandMembers = new ArrayList<>();
         firstBandMembers.add(musician1);
         firstBandMembers.add(musician2);
@@ -47,5 +50,6 @@ public class BandConfig {
         band1.setYearFormed(1983);
         band1.setMembers(firstBandMembers);
 
+        bandRepository.save(band1);
     }
 }
