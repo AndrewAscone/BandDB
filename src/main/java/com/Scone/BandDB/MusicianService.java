@@ -46,4 +46,6 @@ public class MusicianService {
         musicianRepository.delete(musicianToBeDeleted);
         return musicianToBeDeleted;
     }
+
+    //TODO: Add function to delete musician by name?
 }
