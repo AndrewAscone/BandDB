@@ -23,6 +23,12 @@ public class Band {
 
     }
 
+    public Band(String bandName, int yearFormed, List<Musician> members){
+        this.bandName = bandName;
+        this.yearFormed = yearFormed;
+        this.members = members;
+    }
+
     public Band(Long id, String bandName, int yearFormed, List<Musician> members){
         this.id = id;
         this.bandName = bandName;

@@ -21,6 +21,12 @@ public class Musician {
 
     }
 
+    public Musician(String firstName, String lastName, String instrument){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.instrument = instrument;
+    }
+
     public Musician(Long id, String firstName, String lastName, String instrument){
         this.id = id;
         this.firstName = firstName;
