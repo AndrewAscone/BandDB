@@ -72,19 +72,25 @@ public class BandConfig {
         musician4.setLastName("Soprano");
         musician4.setInstrument("Trumpet");
 
-        musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4));
+        musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4,
+                musician5, musician6, musician7, musician8, musician9, musician10, musician11));
 
-        List<Musician> phishBandMembers = new ArrayList<>();
-        phishBandMembers.add(musician1);
-        phishBandMembers.add(musician2);
-        phishBandMembers.add(musician3);
-        phishBandMembers.add(musician4);
+        List<Musician> phishBandMembers = new ArrayList<>(Arrays.asList(musician1, musician2,
+                                                            musician3, musician4));
+
+        List<Musician> streetlightBandMembers = new ArrayList<>(Arrays.asList(musician5,
+                musician6, musician7, musician8, musician9, musician10, musician11));
 
         Band band1 = new Band();
         band1.setBandName("Phish");
         band1.setYearFormed(1983);
         band1.setMembers(phishBandMembers);
 
-        bandRepository.save(band1);
+        Band band2 = new Band();
+        band2.setBandName("Streetlight Manifesto");
+        band2.setYearFormed(2002);
+        band2.setMembers(streetlightBandMembers);
+
+        bandRepository.saveAll(Arrays.asList(band1, band2));
     }
 }
