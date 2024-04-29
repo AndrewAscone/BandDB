@@ -37,18 +37,53 @@ public class BandConfig {
         musician4.setLastName("Fishman");
         musician4.setInstrument("Drums");
 
+        Musician musician5 = new Musician();
+        musician4.setFirstName("Tomas");
+        musician4.setLastName("Kalnoky");
+        musician4.setInstrument("Guitar");
+
+        Musician musician6 = new Musician();
+        musician4.setFirstName("Chris");
+        musician4.setLastName("Thatcher");
+        musician4.setInstrument("Drums");
+
+        Musician musician7 = new Musician();
+        musician4.setFirstName("Mike");
+        musician4.setLastName("Brown");
+        musician4.setInstrument("Saxophone");
+
+        Musician musician8 = new Musician();
+        musician4.setFirstName("Pete");
+        musician4.setLastName("McCullough");
+        musician4.setInstrument("Bass");
+
+        Musician musician9 = new Musician();
+        musician4.setFirstName("Karl");
+        musician4.setLastName("Lyden");
+        musician4.setInstrument("Trombone");
+
+        Musician musician10 = new Musician();
+        musician4.setFirstName("Dan");
+        musician4.setLastName("Ross");
+        musician4.setInstrument("Saxophone");
+
+        Musician musician11 = new Musician();
+        musician4.setFirstName("Mike");
+        musician4.setLastName("Soprano");
+        musician4.setInstrument("Trumpet");
+
         musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4));
 
-        List<Musician> firstBandMembers = new ArrayList<>();
-        firstBandMembers.add(musician1);
-        firstBandMembers.add(musician2);
-        firstBandMembers.add(musician3);
-        firstBandMembers.add(musician4);
+        List<Musician> phishBandMembers = new ArrayList<>();
+        phishBandMembers.add(musician1);
+        phishBandMembers.add(musician2);
+        phishBandMembers.add(musician3);
+        phishBandMembers.add(musician4);
 
         Band band1 = new Band();
         band1.setBandName("Phish");
         band1.setYearFormed(1983);
-        band1.setMembers(firstBandMembers);
+        band1.setMembers(phishBandMembers);
 
         bandRepository.save(band1);
     }
