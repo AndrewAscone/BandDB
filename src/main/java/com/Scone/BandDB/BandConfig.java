@@ -81,15 +81,9 @@ public class BandConfig {
         List<Musician> streetlightBandMembers = new ArrayList<>(Arrays.asList(musician5,
                 musician6, musician7, musician8, musician9, musician10, musician11));
 
-        Band band1 = new Band();
-        band1.setBandName("Phish");
-        band1.setYearFormed(1983);
-        band1.setMembers(phishBandMembers);
+        Band band1 = new Band("Phish", 1983, phishBandMembers);
 
-        Band band2 = new Band();
-        band2.setBandName("Streetlight Manifesto");
-        band2.setYearFormed(2002);
-        band2.setMembers(streetlightBandMembers);
+        Band band2 = new Band("Streetlight Manifesto", 2002, streetlightBandMembers);
 
         bandRepository.saveAll(Arrays.asList(band1, band2));
     }
