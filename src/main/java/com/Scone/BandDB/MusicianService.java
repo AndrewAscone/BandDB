@@ -24,6 +24,40 @@ public class MusicianService {
     }
 
     //TODO: Implement search by musician name (first name? last name? both?)
+    public List<Musician> readByLastName(String lastName){
+        Iterable<Musician> allMusicians = musicianRepository.findAll();
+        List<Musician> requestedList = new ArrayList<>();
+        for(Musician musician : allMusicians){
+            if(musician.getLastName().equals(lastName)){
+                requestedList.add(musician);
+            }
+        }
+        return requestedList;
+    }
+
+    public List<Musician> readByFirstName(String firstName){
+        Iterable<Musician> allMusicians = musicianRepository.findAll();
+        List<Musician> requestedList = new ArrayList<>();
+        for(Musician musician : allMusicians){
+            if(musician.getFirstName().equals(firstName)){
+                requestedList.add(musician);
+            }
+        }
+        return requestedList;
+    }
+
+    public Musician readByFirstAndLastName(String firstName, String lastName){
+        Iterable<Musician> allMusicians = musicianRepository.findAll();
+        Musician requestedMusician = new Musician();
+        for(Musician musician : allMusicians){
+            if(musician.getFirstName().equals(firstName) && musician.getLastName().equals(lastName)){
+                requestedMusician = musician;
+            }
+        }
+        return requestedMusician;
+    }
+
+
 
     public List<Musician> readAll(){
         Iterable<Musician> allMusicians = musicianRepository.findAll();
@@ -48,4 +82,9 @@ public class MusicianService {
     }
 
     //TODO: Add function to delete musician by name?
+    public Musician deleteByName(String firstName, String lastName){
+        Musician musicianToBeDeleted = this.readByFirstAndLastName(firstName, lastName);
+        musicianRepository.delete(musicianToBeDeleted);
+        return musicianToBeDeleted;
+    }
 }
