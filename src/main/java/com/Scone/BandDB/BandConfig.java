@@ -13,10 +13,10 @@ public class BandConfig {
     @Autowired
     private BandRepository bandRepository;
     @Autowired
-    private MusicianRepository musicianRepository;
+    private MusicianRepository musicianRepository; //Should be service injected, not repository
 
     @PostConstruct
-    public void setup(){
+    public void setup(){ //TODO: Break out Musician construction to separate Musician Config
         Musician musician1 = new Musician();
         musician1.setFirstName("Trey");
         musician1.setLastName("Anastasio");
