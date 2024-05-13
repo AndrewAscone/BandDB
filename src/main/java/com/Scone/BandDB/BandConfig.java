@@ -40,39 +40,39 @@ public class BandConfig {
         musician4.setInstrument("Drums");
 
         Musician musician5 = new Musician();
-        musician4.setFirstName("Tomas");
-        musician4.setLastName("Kalnoky");
-        musician4.setInstrument("Guitar");
+        musician5.setFirstName("Tomas");
+        musician5.setLastName("Kalnoky");
+        musician5.setInstrument("Guitar");
 
         Musician musician6 = new Musician();
-        musician4.setFirstName("Chris");
-        musician4.setLastName("Thatcher");
-        musician4.setInstrument("Drums");
+        musician6.setFirstName("Chris");
+        musician6.setLastName("Thatcher");
+        musician6.setInstrument("Drums");
 
         Musician musician7 = new Musician();
-        musician4.setFirstName("Mike");
-        musician4.setLastName("Brown");
-        musician4.setInstrument("Saxophone");
+        musician7.setFirstName("Mike");
+        musician7.setLastName("Brown");
+        musician7.setInstrument("Saxophone");
 
         Musician musician8 = new Musician();
-        musician4.setFirstName("Pete");
-        musician4.setLastName("McCullough");
-        musician4.setInstrument("Bass");
+        musician8.setFirstName("Pete");
+        musician8.setLastName("McCullough");
+        musician8.setInstrument("Bass");
 
         Musician musician9 = new Musician();
-        musician4.setFirstName("Karl");
-        musician4.setLastName("Lyden");
-        musician4.setInstrument("Trombone");
+        musician9.setFirstName("Karl");
+        musician9.setLastName("Lyden");
+        musician9.setInstrument("Trombone");
 
         Musician musician10 = new Musician();
-        musician4.setFirstName("Dan");
-        musician4.setLastName("Ross");
-        musician4.setInstrument("Saxophone");
+        musician10.setFirstName("Dan");
+        musician10.setLastName("Ross");
+        musician10.setInstrument("Saxophone");
 
         Musician musician11 = new Musician();
-        musician4.setFirstName("Mike");
-        musician4.setLastName("Soprano");
-        musician4.setInstrument("Trumpet");
+        musician11.setFirstName("Mike");
+        musician11.setLastName("Soprano");
+        musician11.setInstrument("Trumpet");
 
         musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4,
                 musician5, musician6, musician7, musician8, musician9, musician10, musician11));
