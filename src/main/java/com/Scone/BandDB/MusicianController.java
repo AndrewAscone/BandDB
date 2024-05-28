@@ -28,6 +28,11 @@ public class MusicianController {
         return new ResponseEntity<>(musicianService.readById(id), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/readFirstName/{firstName}")
+    public ResponseEntity<List<Musician>> readByFirstName(@PathVariable String firstName){
+        return new ResponseEntity<>(musicianService.readByFirstName(firstName), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/readAll")
     public ResponseEntity<List<Musician>> readAll(){
         return new ResponseEntity<>(musicianService.readAll(), HttpStatus.OK);
