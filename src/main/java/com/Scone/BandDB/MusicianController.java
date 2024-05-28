@@ -38,6 +38,11 @@ public class MusicianController {
         return new ResponseEntity<>(musicianService.readByLastName(lastName), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/readFirstLastName/{firstName}/{lastName}") //TODO: Fix these path variables
+    public ResponseEntity<Musician> readByFirstAndLastName(@PathVariable String firstName, @PathVariable String lastName){
+        return new ResponseEntity<>(musicianService.readByFirstAndLastName(firstName, lastName), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/readAll")
     public ResponseEntity<List<Musician>> readAll(){
         return new ResponseEntity<>(musicianService.readAll(), HttpStatus.OK);
