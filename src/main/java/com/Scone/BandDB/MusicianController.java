@@ -33,6 +33,11 @@ public class MusicianController {
         return new ResponseEntity<>(musicianService.readByFirstName(firstName), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/readLastName/{lastName}")
+    public ResponseEntity<List<Musician>> readByLastName(@PathVariable String lastName){
+        return new ResponseEntity<>(musicianService.readByLastName(lastName), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/readAll")
     public ResponseEntity<List<Musician>> readAll(){
         return new ResponseEntity<>(musicianService.readAll(), HttpStatus.OK);
