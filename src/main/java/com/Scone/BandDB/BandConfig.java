@@ -21,7 +21,7 @@ public class BandConfig implements Ordered {
     @Autowired
     private MusicianService musicianService;
 
-    @PostConstruct
+    //@PostConstruct
     public void setup(){ //TODO: Break out Musician construction to separate Musician Config
 //        Musician musician1 = new Musician();
 //        musician1.setFirstName("Trey");
