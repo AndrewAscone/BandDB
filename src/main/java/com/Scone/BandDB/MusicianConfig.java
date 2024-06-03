@@ -1,6 +1,7 @@
 package com.Scone.BandDB;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Priority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -9,8 +10,8 @@ import org.springframework.core.annotation.Order;
 import java.util.Arrays;
 
 @Configuration
-@Order(1)
-public class MusicianConfig implements Ordered {
+@Priority(1)
+public class MusicianConfig {
     @Autowired
     private MusicianRepository musicianRepository;
 
@@ -75,10 +76,5 @@ public class MusicianConfig implements Ordered {
                 musician5, musician6, musician7, musician8, musician9, musician10, musician11));
 
         System.out.println("Musician repository has been saved.");
-    }
-
-    @Override
-    public int getOrder() {
-        return 1;
     }
 }

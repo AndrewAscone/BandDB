@@ -1,6 +1,7 @@
 package com.Scone.BandDB;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Priority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -12,8 +13,8 @@ import java.util.List;
 
 
 @Configuration
-@Order(2)
-public class BandConfig implements Ordered {
+@Priority(2)
+public class BandConfig {
     @Autowired
     private BandRepository bandRepository;
  //   @Autowired
@@ -21,7 +22,7 @@ public class BandConfig implements Ordered {
     @Autowired
     private MusicianService musicianService;
 
-    //@PostConstruct
+    @PostConstruct
     public void setup(){ //TODO: Break out Musician construction to separate Musician Config
 //        Musician musician1 = new Musician();
 //        musician1.setFirstName("Trey");
@@ -80,8 +81,9 @@ public class BandConfig implements Ordered {
 
 //        musicianRepository.saveAll(Arrays.asList(musician1, musician2, musician3, musician4,
 //                musician5, musician6, musician7, musician8, musician9, musician10, musician11));
-
+        System.out.println("Hello from Band Config");
         List<Musician> musicianList = musicianService.readAll();
+        System.out.println(musicianList);
 
         List<Musician> phishBandMembers = musicianList.subList(0,3);
 //        phishBandMembers.add(musicianList.get(0));
@@ -104,10 +106,5 @@ public class BandConfig implements Ordered {
         Band band2 = new Band("Streetlight Manifesto", 2002, streetlightBandMembers);
 
         bandRepository.saveAll(Arrays.asList(band1, band2));
-    }
-
-    @Override
-    public int getOrder() {
-        return 2;
     }
 }
