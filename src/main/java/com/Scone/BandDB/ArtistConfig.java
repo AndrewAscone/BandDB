@@ -3,15 +3,16 @@ package com.Scone.BandDB;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Priority;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
 import java.util.Arrays;
 
 @Configuration
-@Priority(1)
-public class MusicianConfig {
+public class ArtistConfig {
     @Autowired
     private MusicianRepository musicianRepository;
 
