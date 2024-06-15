@@ -47,3 +47,14 @@ public class BandService {
 
     //TODO: Add function to delete band by name?
 }
+
+/*
+Extra thoughts:
+-----------------
+Do I need to have the Musician Repo or the Musician Service here as well? Whenever I make a band,
+I should check through the musician list in the newly created band. If the musician is a match for one
+in the existing repo, then I need to connect their id with the id of the band. If not, I need to create
+them in the musician repository so they can be connected to the new band. On the other side of things,
+I need to be able to connect existing musicians to a new band or bands somehow (but maybe that's trying
+to do too much for now?)(maybe that would be a function to add to the musician service).
+ */
