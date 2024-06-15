@@ -24,7 +24,7 @@ public class BandConfig {
     private MusicianService musicianService;
 
     @PostConstruct
-    public void setup(){ //TODO: Break out Musician construction to separate Musician Config
+    public void setup(){
 
         System.out.println("Hello from Band Config");
         List<Musician> musicianList = musicianService.readAll();
