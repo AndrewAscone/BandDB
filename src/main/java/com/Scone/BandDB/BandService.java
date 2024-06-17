@@ -58,6 +58,9 @@ public class BandService {
     }
 
     //TODO: Add function to delete band by name?
+    public Band deleteByName(String bandName){
+        return null;
+    }
 }
 
 /*
