@@ -35,6 +35,11 @@ public class BandController {
         return new ResponseEntity<>(bandService.readAll(), HttpStatus.OK);
     }
 
+    @PutMapping(value = "/update/{id}")
+    public ResponseEntity<Band> updateById(@PathVariable Long id, @RequestBody Band newData){
+        return new ResponseEntity<>(bandService.update(id, newData), HttpStatus.OK);
+    }
+
     @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Band> deleteById(@PathVariable Long id){
         return new ResponseEntity<>(bandService.deleteById(id), HttpStatus.OK);
