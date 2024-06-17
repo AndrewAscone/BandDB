@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BandService {
@@ -42,7 +43,12 @@ public class BandService {
     }
 
     public Band update(Long id, Band newBandData){ //TODO: Implement band update
-        return null;
+        Band bandInDatabase = this.readById(id);
+        bandInDatabase.setBandName(newBandData.getBandName());
+        bandInDatabase.setYearFormed(newBandData.getYearFormed());
+        bandInDatabase.setMembers(newBandData.getMembers());
+        bandInDatabase = bandRepository.save(bandInDatabase);
+        return bandInDatabase;
     }
 
     public Band deleteById(Long id){
