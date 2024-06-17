@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class BandService {
-    private BandRepository bandRepository;
+    private final BandRepository bandRepository;
 
     @Autowired
     public BandService(BandRepository bandRepository){

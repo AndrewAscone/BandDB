@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class MusicianService {
-    private MusicianRepository musicianRepository;
+    private final MusicianRepository musicianRepository;
 
     @Autowired
     public MusicianService(MusicianRepository musicianRepository){
