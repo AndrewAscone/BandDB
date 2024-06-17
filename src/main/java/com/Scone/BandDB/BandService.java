@@ -25,10 +25,10 @@ public class BandService {
         return bandRepository.findById(id).get();
     }
 
-    public Band readByName(String bandName){ //TODO: Implement search by band name
+    public Band readByName(String bandToFind){ //TODO: Implement search by band name
         Iterable<Band> allBands = bandRepository.findAll();
         for (Band band: allBands){
-            if(band.getBandName().equals(bandName)){
+            if(band.getBandName().equals(bandToFind)){
                 return band;
             }
         }
@@ -59,7 +59,9 @@ public class BandService {
 
     //TODO: Add function to delete band by name?
     public Band deleteByName(String bandName){
-        return null;
+        Band bandToBeDeleted = this.readByName(bandName);
+        bandRepository.delete(bandToBeDeleted);
+        return bandToBeDeleted;
     }
 }
 
