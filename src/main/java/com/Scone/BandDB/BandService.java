@@ -11,6 +11,8 @@ import java.util.Optional;
 @Service
 public class BandService {
     private final BandRepository bandRepository;
+    @Autowired
+    private MusicianService musicianService;
 
     @Autowired
     public BandService(BandRepository bandRepository){
