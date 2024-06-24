@@ -30,7 +30,7 @@ public class BandConfig {
         List<Musician> musicianList = musicianService.readAll();
         System.out.println(musicianList);
 
-        List<Musician> phishBandMembers = musicianList.subList(0,3);
+        List<Musician> phishBandMembers = musicianList.subList(0,4);
 
         List<Musician> streetlightBandMembers = musicianList.subList(4,11);
 

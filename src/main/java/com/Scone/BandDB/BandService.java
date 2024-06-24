@@ -20,6 +20,11 @@ public class BandService {
     }
 
     public Band create(Band band){
+//        for(Musician musician : band.getMembers()){
+//            if(){
+//
+//            }
+//        }
         return bandRepository.save(band);
     }
 
