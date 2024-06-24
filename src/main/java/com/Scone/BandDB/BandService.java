@@ -82,3 +82,9 @@ them in the musician repository so they can be connected to the new band. On the
 I need to be able to connect existing musicians to a new band or bands somehow (but maybe that's trying
 to do too much for now?)(maybe that would be a function to add to the musician service).
  */
+
+/*
+Possible functions to add:
+---------------------------
+* Band addMusicianToBand(Musician musician)
+ */

@@ -88,3 +88,9 @@ public class MusicianService {
         return musicianToBeDeleted;
     }
 }
+
+/*
+Possible functions to add:
+-----------------------------
+* boolean musicianInDatabase(Musician musician)
+ */
