@@ -20,6 +20,9 @@ public class BandService {
     }
 
     public Band create(Band band){
+        //On band creation, go through members list
+        //If a Musician doesn't exist in the Musician list, add them
+        //Possibly check against related instrument for similar names?
 //        for(Musician musician : band.getMembers()){
 //            if(){
 //
