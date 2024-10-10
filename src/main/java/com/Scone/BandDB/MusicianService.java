@@ -87,6 +87,10 @@ public class MusicianService {
         musicianRepository.delete(musicianToBeDeleted);
         return musicianToBeDeleted;
     }
+
+    public boolean musicianInDatabase(Musician musician){
+        return false;
+    }
 }
 
 /*
