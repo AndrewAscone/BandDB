@@ -98,9 +98,3 @@ public class MusicianService {
         return false;
     }
 }
-
-/*
-Possible functions to add:
------------------------------
-* boolean musicianInDatabase(Musician musician)
- */

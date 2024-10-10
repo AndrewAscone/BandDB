@@ -20,10 +20,6 @@ public class BandService {
     }
 
     public Band create(Band band){
-        //On band creation, go through members list
-        //If a Musician doesn't exist in the Musician list, add them
-        //Possibly check against related instrument for similar names?
-        //TODO: Implement musician in database boolean check in MusicianService
         for(Musician musician : band.getMembers()){
             if(!musicianService.musicianInDatabase(musician)){
                 musicianService.create(musician);
@@ -36,7 +32,7 @@ public class BandService {
         return bandRepository.findById(id).get();
     }
 
-    public Band readByName(String bandToFind){ //TODO: Implement search by band name
+    public Band readByName(String bandToFind){
         Iterable<Band> allBands = bandRepository.findAll();
         for (Band band: allBands){
             if(band.getBandName().equals(bandToFind)){
