@@ -88,7 +88,13 @@ public class MusicianService {
         return musicianToBeDeleted;
     }
 
-    public boolean musicianInDatabase(Musician musician){
+    public boolean musicianInDatabase(Musician musicianToCheck){
+        Iterable<Musician> allMusicians = new ArrayList<>();
+        for (Musician nextMusician : allMusicians) {
+            if(nextMusician == musicianToCheck){
+                return true;
+            }
+        }
         return false;
     }
 }
