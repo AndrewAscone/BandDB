@@ -24,11 +24,11 @@ public class BandService {
         //If a Musician doesn't exist in the Musician list, add them
         //Possibly check against related instrument for similar names?
         //TODO: Implement musician in database boolean check in MusicianService
-//        for(Musician musician : band.getMembers()){
-//            if(){
-//
-//            }
-//        }
+        for(Musician musician : band.getMembers()){
+            if(!musicianService.musicianInDatabase(musician)){
+                musicianService.create(musician);
+            }
+        }
         return bandRepository.save(band);
     }
 
