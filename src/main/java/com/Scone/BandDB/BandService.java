@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BandService {
@@ -20,11 +18,17 @@ public class BandService {
     }
 
     public Band create(Band band){
-        for(Musician musician : band.getMembers()){
-            if(!musicianService.musicianInDatabase(musician)){
-                musicianService.create(musician);
-            }
-        }
+//        for(Musician musician : band.getMembers()){
+//            if(!musicianService.isMusicianInDatabase(musician)){
+//                musicianService.create(musician);
+//            }
+//        }
+
+        band
+                .getMembers()
+                .stream()
+                .filter(musician -> !musicianService.isMusicianInDatabase(musician))
+                .forEach(musician -> musicianService.create(musician));
         return bandRepository.save(band);
     }
 

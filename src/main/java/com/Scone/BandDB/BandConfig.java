@@ -18,7 +18,7 @@ import java.util.List;
 @Configuration
 public class BandConfig {
     @Autowired
-    private BandRepository bandRepository;
+    private BandService bandService;
 
     @Autowired
     private MusicianService musicianService;
@@ -38,7 +38,8 @@ public class BandConfig {
 
         Band band2 = new Band("Streetlight Manifesto", 2002, streetlightBandMembers);
 
-        bandRepository.saveAll(Arrays.asList(band1, band2));
+        bandService.create(band1);
+        bandService.create(band2);
 
         System.out.println("Bands have been saved to repository");
     }

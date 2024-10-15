@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "firstName": "Trey",
+    "lastName": "Anastasio",
+    "instrument": "Guitar"
+  },
+  {
+    "id": 2,
+    "firstName": "Mike",
+    "lastName": "Gordon",
+    "instrument": "Bass"
+  },
+  {
+    "id": 3,
+    "firstName": "Page",
+    "lastName": "McConnell",
+    "instrument": "Keys"
+  },
+  {
+    "id": 4,
+    "firstName": "Jon",
+    "lastName": "Fishman",
+    "instrument": "Drums"
+  },
+  {
+    "id": 5,
+    "firstName": "Tomas",
+    "lastName": "Kalnoky",
+    "instrument": "Guitar"
+  },
+  {
+    "id": 6,
+    "firstName": "Chris",
+    "lastName": "Thatcher",
+    "instrument": "Drums"
+  },
+  {
+    "id": 7,
+    "firstName": "Mike",
+    "lastName": "Brown",
+    "instrument": "Saxophone"
+  },
+  {
+    "id": 8,
+    "firstName": "Pete",
+    "lastName": "McCullough",
+    "instrument": "Bass"
+  },
+  {
+    "id": 9,
+    "firstName": "Karl",
+    "lastName": "Lyden",
+    "instrument": "Trombone"
+  },
+  {
+    "id": 10,
+    "firstName": "Dan",
+    "lastName": "Ross",
+    "instrument": "Saxophone"
+  },
+  {
+    "id": 11,
+    "firstName": "Mike",
+    "lastName": "Soprano",
+    "instrument": "Trumpet"
+  }
+]

@@ -88,13 +88,19 @@ public class MusicianService {
         return musicianToBeDeleted;
     }
 
-    public boolean musicianInDatabase(Musician musicianToCheck){
-        Iterable<Musician> allMusicians = new ArrayList<>();
-        for (Musician nextMusician : allMusicians) {
-            if(nextMusician == musicianToCheck){
-                return true;
-            }
-        }
-        return false;
+    public boolean isMusicianInDatabase(Musician musicianToCheck){
+//        Iterable<Musician> allMusicians = new ArrayList<>();
+//        for (Musician nextMusician : allMusicians) {
+//            if(nextMusician == musicianToCheck){
+//                return true;
+//            }
+//        }
+//        return false;
+        return musicianRepository.existsById(musicianToCheck.getId());
+    }
+
+    public List<Musician> saveAll(List<Musician> asList) {
+        musicianRepository.saveAll(asList);
+        return asList;
     }
 }
