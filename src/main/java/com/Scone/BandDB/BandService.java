@@ -17,6 +17,9 @@ public class BandService {
         this.bandRepository = bandRepository;
     }
 
+    //When checking if a musician is in the database:
+    //If a musician IS in the database already
+    //Should I change the musician's ID to match/reference the musician already in the DB?
     public Band create(Band band){
 //        for(Musician musician : band.getMembers()){
 //            if(!musicianService.isMusicianInDatabase(musician)){
