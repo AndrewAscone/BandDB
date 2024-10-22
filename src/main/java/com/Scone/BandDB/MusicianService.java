@@ -89,13 +89,16 @@ public class MusicianService {
     }
 
     public boolean isMusicianInDatabase(Musician musicianToCheck){
-//        Iterable<Musician> allMusicians = new ArrayList<>();
-//        for (Musician nextMusician : allMusicians) {
-//            if(nextMusician == musicianToCheck){
-//                return true;
-//            }
-//        }
-//        return false;
+/*        Iterable<Musician> allMusicians = new ArrayList<>();
+        for (Musician nextMusician : allMusicians) {
+            if(nextMusician == musicianToCheck){
+                return true;
+            }
+        }
+        return false;
+
+ */
+        //Check if musician's first name, last name, and instrument match an entry in the database
         return musicianRepository.existsById(musicianToCheck.getId());
     }
 
@@ -113,4 +116,10 @@ handled in the band service? I think I might need to create that addMusicianToBa
 in the band service in order to properly connect a musician to a band when a new band is created.
 Maybe adding a musician to a band can be achieved by passing a band to have members added and a list
 of musicians to add to the band.
+ */
+
+/*
+Functions to add
+------------------
+
  */
