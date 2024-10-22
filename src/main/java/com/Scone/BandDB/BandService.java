@@ -56,7 +56,7 @@ public class BandService {
         return bandList;
     }
 
-    public Band update(Long id, Band newBandData){ //TODO: Implement band update
+    public Band update(Long id, Band newBandData){
         Band bandInDatabase = this.readById(id);
         bandInDatabase.setBandName(newBandData.getBandName());
         bandInDatabase.setYearFormed(newBandData.getYearFormed());
@@ -77,6 +77,15 @@ public class BandService {
         bandRepository.delete(bandToBeDeleted);
         return bandToBeDeleted;
     }
+
+    public Band addMusicianToBand(Long id, Musician musicianToAdd){
+        Band bandInDatabase = this.readById(id);
+        List<Musician> musiciansInBand = bandInDatabase.getMembers();
+        musiciansInBand.add(musicianToAdd);
+        bandInDatabase.setMembers(musiciansInBand);
+        bandInDatabase = bandRepository.save(bandInDatabase);
+        return bandInDatabase;
+    }
 }
 
 /*
@@ -93,5 +102,5 @@ to do too much for now?)(maybe that would be a function to add to the musician s
 /*
 Possible functions to add:
 ---------------------------
-* Band addMusicianToBand(Musician musician)
+
  */
