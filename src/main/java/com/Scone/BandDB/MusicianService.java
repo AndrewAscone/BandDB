@@ -104,3 +104,13 @@ public class MusicianService {
         return asList;
     }
 }
+
+/*
+Extra thoughts
+----------------
+Do I need a means of adding a newly created musician to a band from here? Or should it be
+handled in the band service? I think I might need to create that addMusicianToBand function
+in the band service in order to properly connect a musician to a band when a new band is created.
+Maybe adding a musician to a band can be achieved by passing a band to have members added and a list
+of musicians to add to the band.
+ */
