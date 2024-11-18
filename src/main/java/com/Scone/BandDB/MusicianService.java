@@ -92,8 +92,9 @@ public class MusicianService {
         Iterable<Musician> allMusicians = new ArrayList<>();
         for (Musician nextMusician : allMusicians) {
             boolean musicianFirstNameMatch = nextMusician.getFirstName().equals(musicianToCheck.getFirstName());
-
-            if(nextMusician == musicianToCheck){
+            boolean musicianLastNameMatch = nextMusician.getLastName().equals(musicianToCheck.getLastName());
+            boolean musicianInstrumentMatch = nextMusician.getInstrument().equals(musicianToCheck.getInstrument());
+            if(musicianFirstNameMatch && musicianLastNameMatch && musicianInstrumentMatch){
                 return true;
             }
         }
