@@ -89,17 +89,20 @@ public class MusicianService {
     }
 
     public boolean isMusicianInDatabase(Musician musicianToCheck){
-/*        Iterable<Musician> allMusicians = new ArrayList<>();
+        Iterable<Musician> allMusicians = new ArrayList<>();
         for (Musician nextMusician : allMusicians) {
+            boolean musicianFirstNameMatch = nextMusician.getFirstName().equals(musicianToCheck.getFirstName());
+
             if(nextMusician == musicianToCheck){
                 return true;
             }
         }
         return false;
 
- */
         //Check if musician's first name, last name, and instrument match an entry in the database
-        return musicianRepository.existsById(musicianToCheck.getId());
+        //Can't check by id, newly entered musician wouldn't be assigned the same id as previous entry
+
+        //return musicianRepository.existsById(musicianToCheck.getId());
     }
 
     public List<Musician> saveAll(List<Musician> asList) {
