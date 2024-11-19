@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "ff346fc8-b3c3-485c-bad2-ec6cc4720bdb",
+		"name": "BandDB requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24928357"
+	},
+	"item": [
+		{
+			"name": "Band: ReadAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/band/readAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"band",
+						"readAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Musician: ReadAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/musician/readAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musician",
+						"readAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Musician: Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Dean\",\r\n    \"lastName\": \"Walls\",\r\n    \"instrument\": \"Drums\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musician/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musician",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Band: Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bandName\": \"\",\r\n    \"yearFormed\": ,\r\n    \"members\": [\r\n        {\r\n            \"firstName\": \"\",\r\n            \"lastName\": \"\",\r\n            \"instrument\": \"\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/band/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"band",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Musician: Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Leon\",\r\n    \"lastName\": \"Hunter\",\r\n    \"instrument\": \"Keys\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musician/update/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musician",
+						"update",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
